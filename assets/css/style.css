@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+body
+{
+    overflow-x: hidden;
+    background: #070E27; !important
+}
+nav{
+  background: #070E27;
+  display: flex;
+  height: 100px;
+  width: 100%;
+    border-bottom: solid 2px #4E5A85;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.telegram-btn
+{
+    padding: 40px;
+}
+/*header content*/
+
+.header-content
+{
+    margin-top: 100px;
+    font-family: tourney;
+}
+.header{
+}
+.header-content h1
+{
+/*    background: url(giphy.gif);*/
+    font-size: 75px;
+    font-weight: 800;
+    background-blend-mode: color;
+    backface-visibility: hidden;
+    font-family: tourney;
+    color: white;
+}
+.header-content p
+{
+    color: white;
+    text-align: justify;
+}
+.header-bottom-icon
+{
+    margin-top: 40px;
+    color: white
+}
+
+.header-bottom-icon a{
+    color: white;
+}
+
+.header-bottom-icon a:hover{
+    color: white;
+    transition: .5s ease-in-out;
+}
+.header-bottom-icon i
+{
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*all-header-content*/
+.all-header-content h1
+{
+    padding-top: 40px;padding-bottom: 40px;
+    font-size: 40px;
+    font-family: tourney;
+    color: white;
+    text-align: center;
+}
+.content h1{
+    color: black;
+    font-family: tourney;
+}
+/*Road maP Carousel*/
+
+.wrapper{
+  width: 100%;
+}
+.carousel .card{
+    color: white;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    box-shadow: 0px 10px 20px rgba(230,230,230,.5);
+  margin: 5px;
+  border-radius: 10px;
+}
+/*FAQ*/
+.wrapper{
+  max-width: 100%
+  padding: 0 20px;
+}
+.wrapper .parent-tab,
+.wrapper .child-tab{
+  margin-bottom: 8px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.18);
+}
+.wrapper .parent-tab label,
+.wrapper .child-tab label{
+  background: #007bff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 3px;
+  position: relative;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+.wrapper .parent-tab label:hover{
+  background: #006fe6;
+}
+.parent-tab input:checked ~ label,
+.child-tab input:checked ~ label{
+  border-radius: 3px 3px 0 0;
+  background: #006fe6;
+}
+.wrapper label span{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0 -1px 1px #0056b3;
+}
+.wrapper .child-tab label span{
+  font-size: 17px;
+}
+.parent-tab label .icon{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  color: #007bff;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  text-shadow: 0 -1px 1px #0056b3;
+}
+.wrapper .child-tab label .icon{
+  height: 27px;
+  width: 27px;
+}
+.parent-tab label .icon i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.parent-tab input:checked ~ label .icon i:before,
+.child-tab input:checked ~ label .icon i:before{
+  content: '\f068';
+}
+.wrapper .parent-tab .content,
+.wrapper .child-tab .sub-content{
+  max-height: 0px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 0 0 3px 3px;
+  transition: all 0.4s ease;
+}
+.parent-tab input:checked ~ .content,
+.child-tab input:checked ~ .sub-content{
+  max-height: 100vh;
+}
+.tab-3 input:checked ~ .content{
+  padding: 15px 20px;
+}
+.parent-tab .content p,
+.child-tab .sub-content p{
+  padding: 15px 20px;
+  font-size: 16px;
+}
+.child-tab .sub-content p{
+  font-size: 15px;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
+/*Partener Card*/
+.partner-card{
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+.partner-card .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.partner-card .front-face.front-face01
+{            
+    background-image: url(../img/binance-coin-bnb-logo.png);
+    background-size: cover;
+    transform: perspective(400px);
+}
+
+.partner-card .front-face.front-face02
+{            
+    background-image: url(../img/ethereum-eth-logo.png);
+    background-size: cover;
+    background-position: center;
+    transform: perspective(400px);
+}
+
+.partner-card .front-face.front-face03
+{            
+    background-image: url(../img/bitcoin-btc-logo.png);
+    background-size: cover;
+    transform: perspective(400px);
+}
+
+.partner-card .front-face.front-face04
+{            
+    background-image: url(../img/tether-usdt-logo.png);
+    background-size: cover;
+    transform: perspective(400px);
+}
+.partner-card:hover > .front-face{
+  transform: rotateY(-180deg) perspective(500px);
+    transform-style: preserve-3d;
+}
+.partner-card .card .title h1{
+    transform: perspective(500px) translateZ(50px);
+}
+.partner-card .back-face{
+  display: flex;
+    background:  #081131;
+    color: white;font-weight: 700;
+    transform-style: preserve-3d;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.partner-card:hover > .back-face{
+  transform: rotateY(0deg) perspective(500px);
+}
+.partner-card .back-face .info{
+  text-align: center;
+}
+/*Footer*/
+
+.footer-content-icon a{
+    padding-top:30px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+}
